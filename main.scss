@@ -1,0 +1,149 @@
+//Values
+$navbar-height: 50px;
+$hero-height: 120px;
+$blue-section-height: 170px;
+$yellow-section-height: 170px;
+$grey-section-height: 170px;
+$light-color: 20;
+$dark-color: 20;
+$footer-height: 120px;
+
+//Colors
+$noir: #333333;
+$bleu: #4f52dd;
+$rouge: #ab4354;
+$jaune: #F0E36B;
+$gris: #D3D3D3;
+
+
+//breakpoints
+$xsmall: 370px;
+$small: 700px;
+$medium: 1080px;
+$large: 1400px;
+$xlarge: 1920px;
+
+html, body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.container h1{
+    color: $rouge;
+    text-align: center;
+}
+
+.container img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+.navbar{
+    width: 100%;
+    height: $navbar-height;
+    background-color:$noir;
+}
+
+.footer{
+    width: 100%;
+    height: $footer-height;
+    background-color:$noir;
+}
+
+.hero{
+    width: 100%;
+    height: $hero-height;
+    background-color: $rouge;
+}
+
+.blue-section{
+    width: 100%;
+    height: $blue-section-height;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @media screen and (max-width: $medium) {flex-direction: column;}
+
+    .bs-bloc{
+        flex:1;
+        width: 100%;
+        height: 170px;
+        
+        &.light-blue{
+            background-color: lighten($color: $bleu, $amount: 10);
+        }
+
+        &.dark-blue{
+            background-color: darken($color: $bleu, $amount:  40);
+        }
+    }
+
+    
+}
+
+.yellow-section{
+    width: 100%;
+    height: $yellow-section-height;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .bs-bloc{
+        flex:1;
+        width: 100%;
+        height: 170px;
+        
+        &.light-yellow{
+            background-color: lighten($color: $jaune, $amount: 10);
+        }
+
+        &.dark-yellow{
+            background-color: darken($color: $jaune, $amount:  10);
+        }
+    }
+
+    
+}
+
+.grey-section{
+    width: 100%;
+    height: $grey-section-height;
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: $medium) {
+        flex-direction: column; 
+    }
+    .bs-bloc{
+        flex:1;
+        height: 170px;
+        @media (max-width: $medium) and (min-width: $small) {
+            flex: 0 0 50%;
+            flex-wrap: wrap;
+        }   
+
+        &.light-grey{
+            background-color: lighten($color: $gris, $amount: 10);
+        }
+
+        &.normal-grey{
+            background-color: $gris;
+        }
+
+        &.dark-grey{
+            background-color: darken($color: $gris, $amount:  40);
+        }
+    }
+    
+}
+
+
