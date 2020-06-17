@@ -34,7 +34,6 @@ $xlarge: 1920px;
     
 
     .navbar{
-        display: flex;
         flex-direction: row;
         width: 100%;
         position:fixed;
@@ -48,6 +47,11 @@ $xlarge: 1920px;
                 display: none;
             }
         }
+
+        .nav {
+                display: flex;
+                justify-content: space-around;;
+            }
 
 
         .icon{
@@ -72,6 +76,7 @@ $xlarge: 1920px;
     @media only screen and (min-width: $medium) {
 
         .navbar{
+            display: flex;
             top:0;
             border-bottom:1px solid rgb(174, 174, 179);
             background-color: #31306d;

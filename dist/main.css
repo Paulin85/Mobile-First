@@ -6,7 +6,6 @@ html, body {
 }
 
 .navbar {
-  display: flex;
   flex-direction: row;
   width: 100%;
   position: fixed;
@@ -20,6 +19,11 @@ html, body {
   .navbar img {
     display: none;
   }
+}
+
+.navbar .nav {
+  display: flex;
+  justify-content: space-around;
 }
 
 .navbar .icon {
@@ -38,6 +42,7 @@ html, body {
 
 @media only screen and (min-width: 1080px) {
   .navbar {
+    display: flex;
     top: 0;
     border-bottom: 1px solid #aeaeb3;
     background-color: #31306d;
